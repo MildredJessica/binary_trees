@@ -43,7 +43,8 @@ height_r = binary_tree_height(tree->right);
 balancer = height_l > height_r ? height_l - height_r : height_r - height_l;
 if (balancer > 1)
 return (0);
-return (bal_avl(tree->left, lower, tree->n - 1) && bal_avl(tree->right, tree->n + 1, high));
+return (bal_avl(tree->left, lower, tree->n - 1) &&
+bal_avl(tree->right, tree->n + 1, high));
 }
 return (1);
 }
